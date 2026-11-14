@@ -1,27 +1,55 @@
+import { Link } from "react-router-dom";
+import "../Pages.css";
 
 function Features() {
   return (
-    <div>
-      <h1>Our Features</h1>
+    <div className="features-page">
+      <div className="page-heading">
+        <h1>Our Features</h1>
+        <p>Everything you need to discover your next great book.</p>
+      </div>
 
-      <p>
-        Explore the features of our Online Bookstore.
-      </p>
+      <div className="features-grid">
+        <div className="feature-card">
+          <span className="feature-icon">📚</span>
+          <h2>Browse Books</h2>
+          <p>
+            Explore our collection of books with clear
+            descriptions, authors, and prices.
+          </p>
+        </div>
 
-      <h2>Browse Books</h2>
-      <p>
-        Discover books from different categories.
-      </p>
+        <div className="feature-card">
+          <span className="feature-icon">🔍</span>
+          <h2>Search Books</h2>
+          <p>
+            Quickly find books by typing their titles
+            into our search bar.
+          </p>
+        </div>
 
-      <h2>Search Books</h2>
-      <p>
-        Easily find books by their titles.
-      </p>
+        <div className="feature-card">
+          <span className="feature-icon">📱</span>
+          <h2>Responsive Design</h2>
+          <p>
+            Enjoy a comfortable browsing experience
+            on your laptop, tablet, or phone.
+          </p>
+        </div>
 
-      <h2>Book Details</h2>
-      <p>
-        View information about your favorite books.
-      </p>
+        <div className="feature-card">
+          <span className="feature-icon">💰</span>
+          <h2>Book Prices</h2>
+          <p>
+            View book prices clearly and compare
+            different titles before choosing.
+          </p>
+        </div>
+      </div>
+
+      <Link to="/books" className="features-button">
+        Explore Our Books
+      </Link>
     </div>
   );
 }

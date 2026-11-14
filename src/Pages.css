@@ -1,45 +1,59 @@
-/* Shared page styling */
+/* General page layout */
 .books-page,
 .about-page,
 .features-page,
 .contact-page {
   min-height: 85vh;
-  padding: 50px 7%;
+  padding: 55px 7%;
   background-color: #f5f0e8;
   color: #17243b;
+  box-sizing: border-box;
 }
 
+.page-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.page-heading h1,
+.books-page h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.page-heading p,
+.books-page > p {
+  color: #596579;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Books page */
 .books-page {
   text-align: center;
 }
 
-.books-page h1,
-.about-page h1,
-.features-page h1,
-.contact-page h1 {
-  font-size: 38px;
-  margin-bottom: 15px;
-}
-
-/* Books search */
 .search-input {
+  display: block;
   width: 100%;
   max-width: 450px;
   padding: 14px 18px;
+  margin: 25px auto 40px;
   border: 1px solid #ddd;
   border-radius: 10px;
   font-size: 16px;
-  margin: 20px 0 35px;
+  box-sizing: border-box;
 }
 
-/* Book cards */
 .books-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 25px;
 }
 
-.book-card {
+.book-card,
+.about-card,
+.feature-card {
   background-color: white;
   border-radius: 15px;
   padding: 25px;
@@ -47,25 +61,18 @@
   transition: transform 0.3s;
 }
 
-.book-card:hover {
+.book-card:hover,
+.about-card:hover,
+.feature-card:hover {
   transform: translateY(-5px);
 }
 
-.book-image,
-.book-placeholder {
+.book-image {
+  display: block;
   width: 100%;
   height: 230px;
   object-fit: contain;
-  border-radius: 8px;
   margin-bottom: 15px;
-}
-
-.book-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f5f0e8;
-  font-size: 65px;
 }
 
 .book-card h2 {
@@ -84,39 +91,131 @@
   margin-top: 12px;
 }
 
-/* About, Features and Contact */
-.about-page,
-.features-page,
-.contact-page {
+/* About page */
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.about-card h2 {
+  font-size: 23px;
+  margin-bottom: 18px;
+  color: #17243b;
+}
+
+.about-card p {
+  color: #596579;
+  line-height: 1.8;
+}
+
+/* Features page */
+.features-page {
   text-align: center;
 }
 
-.about-page p,
-.features-page p,
-.contact-page p {
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.feature-icon {
+  font-size: 45px;
+  display: block;
+  margin-bottom: 18px;
+}
+
+.feature-card h2 {
+  margin-bottom: 15px;
+  font-size: 23px;
+}
+
+.feature-card p {
   color: #596579;
   line-height: 1.8;
-  font-size: 17px;
 }
 
-.contact-page form {
-  max-width: 500px;
-  margin: 30px auto;
+.features-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #17243b;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.features-button:hover {
+  background-color: #344563;
+}
+
+/* Contact page */
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 35px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contact-info,
+.contact-form {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.contact-info h2,
+.contact-form h2 {
+  margin-bottom: 20px;
+}
+
+.contact-info > p,
+.contact-detail p {
+  color: #596579;
+  line-height: 1.7;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.contact-detail span {
+  font-size: 30px;
+}
+
+.contact-detail h3 {
+  margin-bottom: 5px;
+}
+
+.contact-form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
 }
 
-.contact-page input,
-.contact-page textarea {
+.contact-form label {
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
   padding: 14px;
   border: 1px solid #ddd;
   border-radius: 8px;
   font: inherit;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.contact-page button {
-  padding: 14px;
+.contact-form button {
+  margin-top: 10px;
+  padding: 15px;
   background-color: #17243b;
   color: white;
   border: none;
@@ -124,22 +223,49 @@
   cursor: pointer;
 }
 
-/* Responsive layout */
+.contact-form button:hover {
+  background-color: #344563;
+}
+
+.success-message {
+  color: #167347;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+/* Responsive */
 @media (max-width: 900px) {
-  .books-grid {
+  .books-grid,
+  .about-content {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 600px) {
-  .books-grid {
+  .books-grid,
+  .about-content,
+  .features-grid {
     grid-template-columns: 1fr;
   }
 
-  .books-page h1,
-  .about-page h1,
-  .features-page h1,
-  .contact-page h1 {
+  .books-page,
+  .about-page,
+  .features-page,
+  .contact-page {
+    padding: 35px 5%;
+  }
+
+  .page-heading h1,
+  .books-page h1 {
     font-size: 30px;
+  }
+
+  .contact-info,
+  .contact-form {
+    padding: 20px;
   }
 }
