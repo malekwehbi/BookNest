@@ -1,18 +1,28 @@
+import { Link } from "react-router-dom";
+import "./Home.css";
+
 function Home() {
   return (
-    <div>
-      <h1>Welcome to Online Bookstore</h1>
+    <div className="home">
+      <section className="hero">
+        <div className="hero-content">
+          <h1>Discover Your Next Great Read</h1>
 
-      <p>
-        Discover your favorite books in one place.
-      </p>
+          <p>
+            Welcome to BookNest, your online destination
+            for amazing books. Explore our collection
+            and find your next favorite story.
+          </p>
 
-      <h2>Find Your Next Great Read</h2>
+          <Link to="/books" className="explore-btn">
+            Explore Books
+          </Link>
+        </div>
 
-      <p>
-        Browse our collection of books and
-        explore different categories.
-      </p>
+        <div className="hero-image">
+         <img src="/images/books-hero.jpg" alt="Book collection" />
+        </div>
+      </section>
     </div>
   );
 }
