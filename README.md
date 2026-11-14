@@ -1,16 +1,122 @@
-# React + Vite
+# BookNest - Online Bookstore
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+## Project Overview
 
-Currently, two official plugins are available:
+BookNest is a responsive online bookstore website developed using React.js as part of the CSCI426 Advanced Web Programming course.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The website allows users to explore a collection of books, search for books by title, view book information, and navigate between different pages.
 
-## React Compiler
+## Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React.js
+- JavaScript (JSX)
+- HTML5
+- CSS3
+- React Router DOM
+- Vite
+- Git and GitHub
 
-## Expanding the Oxlint configuration
+## Website Pages
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+### 1. Home
+
+- Welcoming homepage
+- Bookstore introduction
+- Hero section with an image
+
+### 2. Books
+
+- Display a collection of six books
+- Show book covers, titles, authors, and prices
+- Search books dynamically by title
+- Responsive book cards
+
+### 3. About
+
+- Information about BookNest
+- Our mission
+- Reasons to choose BookNest
+
+### 4. Features
+
+- Book browsing
+- Search functionality
+- Responsive design
+- Book price display
+
+### 5. Contact
+
+- Contact form with name, email, and message
+- Required field validation
+- Email format validation
+- Demo confirmation message
+
+Note: The contact form is frontend-only and does not send actual emails.
+
+## Additional Features
+
+- Responsive navigation bar
+- Mobile navigation menu
+- Active page highlighting
+- Footer
+- Modern and responsive design
+
+## Installation and Setup
+
+1. Clone the repository:
+
+   git clone YOUR_GITHUB_REPOSITORY_URL
+
+2. Open the project folder:
+
+   cd bookstore-app
+
+3. Install dependencies:
+
+   npm install
+
+4. Start the development server:
+
+   npm run dev
+
+5. Open the local URL displayed in the terminal.
+
+## Project Structure
+
+    bookstore-app/
+    ├── public/
+    │   └── images/
+    ├── src/
+    │   ├── components/
+    │   │   ├── Navbar.jsx
+    │   │   ├── Navbar.css
+    │   │   ├── Footer.jsx
+    │   │   └── Footer.css
+    │   ├── pages/
+    │   │   ├── Home.jsx
+    │   │   ├── Home.css
+    │   │   ├── Books.jsx
+    │   │   ├── About.jsx
+    │   │   ├── Features.jsx
+    │   │   └── Contact.jsx
+    │   ├── Pages.css
+    │   └── App.jsx
+    ├── package.json
+    └── README.md
+
+## Screenshots
+
+Screenshots of the website pages will be added before final submission.
+
+## Deployment
+
+Live website: To be added after deployment.
+
+## Author
+
+Developed as an individual university project for CSCI426.
+
+## Project Status
+
+Frontend implementation completed.
+Final testing and deployment are pending.
