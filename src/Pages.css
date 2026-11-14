@@ -1,0 +1,145 @@
+/* Shared page styling */
+.books-page,
+.about-page,
+.features-page,
+.contact-page {
+  min-height: 85vh;
+  padding: 50px 7%;
+  background-color: #f5f0e8;
+  color: #17243b;
+}
+
+.books-page {
+  text-align: center;
+}
+
+.books-page h1,
+.about-page h1,
+.features-page h1,
+.contact-page h1 {
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+/* Books search */
+.search-input {
+  width: 100%;
+  max-width: 450px;
+  padding: 14px 18px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  margin: 20px 0 35px;
+}
+
+/* Book cards */
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.book-card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+}
+
+.book-image,
+.book-placeholder {
+  width: 100%;
+  height: 230px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.book-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f0e8;
+  font-size: 65px;
+}
+
+.book-card h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.book-card p {
+  color: #596579;
+}
+
+.book-card .book-price {
+  color: #c18b42;
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+/* About, Features and Contact */
+.about-page,
+.features-page,
+.contact-page {
+  text-align: center;
+}
+
+.about-page p,
+.features-page p,
+.contact-page p {
+  color: #596579;
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+.contact-page form {
+  max-width: 500px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-page input,
+.contact-page textarea {
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.contact-page button {
+  padding: 14px;
+  background-color: #17243b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Responsive layout */
+@media (max-width: 900px) {
+  .books-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .books-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .books-page h1,
+  .about-page h1,
+  .features-page h1,
+  .contact-page h1 {
+    font-size: 30px;
+  }
+}
