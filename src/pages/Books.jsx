@@ -39,14 +39,25 @@ function Books() {
     price: 22
   }
   ]);
+  const [search, setSearch] = useState("");
+
+const filteredBooks = books.filter((book) =>
+  book.title.toLowerCase().includes(search.toLowerCase())
+);
 
   return (
     <div>
       <h1>Our Books</h1>
+      <input
+  type="text"
+  placeholder="Search for a book..."
+  value={search}
+  onChange={(e) => setSearch(e.target.value)}
+/>
       <p>Explore our collection of books.</p>
 
       <div>
-        {books.map((book) => (
+        {filteredBooks.map((book) => (
           <div key={book.id}>
             <h2>{book.title}</h2>
             <p>Author: {book.author}</p>
