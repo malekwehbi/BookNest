@@ -1,19 +1,64 @@
-import { NavLink } from "react-router-dom";
+
+import { useState } from "react";
+import { NavLink, Link } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
-  return (
-    <nav className="navbar">
-      <h2 className="logo">📚 BookNest</h2>
+  const [menuOpen, setMenuOpen] = useState(false);
 
-      <div className="nav-links">
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/books">Books</NavLink>
-        <NavLink to="/about">About</NavLink>
-        <NavLink to="/features">Features</NavLink>
-        <NavLink to="/contact">Contact</NavLink>
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
+  return (
+    <header className="navbar">
+      <div className="navbar-container">
+        <Link
+          to="/"
+          className="navbar-logo"
+          onClick={closeMenu}
+        >
+          📚 BookNest
+        </Link>
+
+        <button
+          className="menu-toggle"
+          type="button"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={menuOpen}
+          aria-controls="navbar-links"
+        >
+          {menuOpen ? "✕" : "☰"}
+        </button>
+
+        <nav
+          id="navbar-links"
+          className={`navbar-links ${menuOpen ? "active" : ""}`}
+          aria-label="Main navigation"
+        >
+          <NavLink to="/" end onClick={closeMenu}>
+            Home
+          </NavLink>
+
+          <NavLink to="/books" onClick={closeMenu}>
+            Books
+          </NavLink>
+
+          <NavLink to="/about" onClick={closeMenu}>
+            About
+          </NavLink>
+
+          <NavLink to="/features" onClick={closeMenu}>
+            Features
+          </NavLink>
+
+          <NavLink to="/contact" onClick={closeMenu}>
+            Contact
+          </NavLink>
+        </nav>
       </div>
-    </nav>
+    </header>
   );
 }
 

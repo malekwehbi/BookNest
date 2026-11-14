@@ -6,6 +6,7 @@ import Features from "./pages/Features";
 import Contact from "./pages/Contact";
 import Books from "./pages/Books";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -18,7 +19,9 @@ function App() {
         <Route path="/features" element={<Features />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/books" element={<Books />} />
+      
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
