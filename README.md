@@ -108,9 +108,20 @@ Note: The contact form is frontend-only and does not send actual emails.
 
 Screenshots of the website pages will be added before final submission.
 
+## Live Website
+
+BookNest is deployed on Vercel.
+
+**Live Demo:** https://book-nest-one-topaz.vercel.app/
+
+**GitHub Repository:** https://github.com/malekwehbi/BookNest
+
 ## Deployment
 
-Live website: To be added after deployment.
+- Platform: Vercel
+- Framework: React.js with Vite
+- Branch: main
+- Automatic deployment from GitHub
 
 ## Author
 
