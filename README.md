@@ -131,3 +131,25 @@ Developed as an individual university project for CSCI426.
 
 Frontend implementation completed.
 Final testing and deployment are pending.
+
+## Project Screenshots
+
+### Home Page
+
+![Home Page](screenshots/home.png)
+
+### Books Page
+
+![Books Page](screenshots/books.png)
+
+### About Page
+
+![About Page](screenshots/about.png)
+
+### Features Page
+
+![Features Page](screenshots/features.png)
+
+### Contact Page
+
+![Contact Page](screenshots/contact.png)
