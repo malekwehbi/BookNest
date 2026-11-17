@@ -1,7 +1,8 @@
+
 import { useState } from "react";
 import "../Pages.css";
 
-function Books() {
+function Books({ addToCart }) {
   const [search, setSearch] = useState("");
 
   const books = [
@@ -80,6 +81,14 @@ function Books() {
             <p className="book-price">
               ${book.price}
             </p>
+
+            <button
+              className="add-cart-btn"
+              onClick={() => addToCart(book)}
+            >
+              Add to Cart
+            </button>
+
           </div>
         ))}
       </div>
