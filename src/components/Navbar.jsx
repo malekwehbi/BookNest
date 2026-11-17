@@ -3,12 +3,16 @@ import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import "./Navbar.css";
 
-function Navbar() {
+function Navbar({ cart = [] }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const closeMenu = () => {
     setMenuOpen(false);
   };
+
+  const cartCount = cart.reduce(
+    (sum, book) => sum + book.quantity, 0
+  );
 
   return (
     <header className="navbar">
@@ -56,6 +60,16 @@ function Navbar() {
           <NavLink to="/contact" onClick={closeMenu}>
             Contact
           </NavLink>
+
+          <NavLink
+            to="/cart"
+            className="cart-link"
+            onClick={closeMenu}
+          >
+            🛒 Cart
+            <span className="cart-count">{cartCount}</span>
+          </NavLink>
+
         </nav>
       </div>
     </header>

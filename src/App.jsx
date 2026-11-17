@@ -40,7 +40,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Navbar />
+    <Navbar cart={cart} />
 
       <Routes>
         <Route path="/" element={<Home />} />
